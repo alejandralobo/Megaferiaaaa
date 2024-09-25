@@ -4,10 +4,17 @@
  */
 package core;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author loboam
  */
-class Gerente {
-    
+class Gerente extends Persona {
+        private Editorial editorial;
+
+    public Gerente(ArrayList<AudioLibro> libros, String nomnbre, int cedula) {
+        super(libros, nomnbre, cedula);
+    }
+
 }

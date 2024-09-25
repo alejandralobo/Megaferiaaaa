@@ -8,22 +8,22 @@ import java.util.ArrayList;
 
 /**
  *
- * @author loboam
+ * @author aleja
  */
-class Editorial {
+public class Narrador extends Persona {
 
-    private String nit;
-    private String nombre;
-    private String direccion;
-    private ArrayList<Libro> libros;
-    private ArrayList<Stand> stands;
+    private ArrayList<AudioLibro> libros;
 
-    public boolean addLibro(Libro libro) {
+    public Narrador(ArrayList<AudioLibro> libros, String nomnbre, int cedula) {
+        super(libros, nomnbre, cedula);
+    }
 
+    public boolean addLibro(AudioLibro libro) {
         if (!this.libros.contains(libro)) {
             this.libros.add(libro);
             return true;
         }
         return false;
     }
+
 }

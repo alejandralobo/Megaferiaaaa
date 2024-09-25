@@ -4,10 +4,30 @@
  */
 package core;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author loboam
  */
-class Persona {
-    
+public abstract class Persona {
+
+    private ArrayList<AudioLibro> libros;
+    private String nomnbre;
+    private int cedula;
+
+    public Persona(ArrayList<AudioLibro> libros, String nomnbre, int cedula) {
+        this.libros = libros;
+        this.nomnbre = nomnbre;
+        this.cedula = cedula;
+    }
+
+    public boolean addLibro(AudioLibro libro) {
+        if (!this.libros.contains(libro)) {
+            this.libros.add(libro);
+            return true;
+        }
+        return false;
+    }
+
 }
